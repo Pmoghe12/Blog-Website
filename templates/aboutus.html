@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+
+
+
+{% block content %}
+
+
+
+<br>
+<br>
+<div class="row text-center ">
+    <div class="col-lg-4 col-sm-12 pp ">
+        <img class="yz" src="post_image/5.jpg">
+        <br>
+        <br>
+       <h3><b> About Us</b></h3>
+        <a href="{% url 'abt' %}"> <button class="btn btn-danger "><b>Read More</b></button></a>
+    </div>
+    
+  <!--  <div class="col-lg-4 col-sm-12 pp">
+      <img class="yz" src="post_image/6.jpg">
+        <h3><b>Blog</b></h3>
+        <a href="about.html"> <button class="btn btn-danger"><b>Read More</b></button></a>
+    </div> -->
+    <div class="col-lg-4 col-sm-12 pp"></div>
+    
+    <div class="col-lg-4 col-sm-12 pp">
+      <img class="yz" src="post_image/6.jpg">
+      <br>
+      <br>
+        <h3><b>Join Us</b></h3>
+        <a href="{% url 'join' %}"><button class="btn btn-danger"><b>Read More</b></button></a>
+    </div>
+    
+    
+            </div>
+
+
+{% endblock content %}

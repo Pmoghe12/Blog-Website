@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+
+
+
+{% block content %}
+<br>
+<br>
+<br>
+<div class="content">
+ <br>
+<h5><b>Blog Details</b></h5>
+<h1><center><b>{{batman.title}}</b></center></h1>
+<br>
+
+  
+    <p><b>
+         {{batman.text}}
+        </b></p>
+        <br>
+        <a href="{% url 'blog_edit' batman.pk %}"><button class="btn btn-warning"><b>Edit</b></button></a>
+  
+        <a href="{% url 'blog_delete' batman.pk %}"><button class="btn btn-danger"><b>Delete</b></button></a>
+    
+</div>
+{% endblock content %}

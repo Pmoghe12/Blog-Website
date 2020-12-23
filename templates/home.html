@@ -1,0 +1,63 @@
+{% extends "index.html" %}
+
+
+
+{% block content %}
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active ">
+        <img height="427px" src="post_image/es4.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img height="427px" src="post_image/es6.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img height="427px" src="post_image/es5.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+<br>
+
+<div class="row">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+
+{% for x in object_list  %}
+
+        
+    <div class="col-lg-3" >
+  <div class="pp text-center">
+        <img class="yz" width="150px" height="150px" src='{{x.image}}' alt="">
+      </div>
+      <div class="text-center">
+<h3><b>
+        {{x.title}}
+  
+</b></h3>
+ 
+
+    <p>
+        
+        <a href="{% url 'detailView' x.pk   %}">
+            <button class="btn btn-success"><b>Know More</b></button>
+        </a>
+    </p>
+
+  </div>
+</div>
+
+<br>
+
+{% endfor %}
+
+</div>
+
+{% endblock content %}

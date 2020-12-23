@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+
+
+
+{% block content %}
+<br>
+<br>
+<br>
+<div class="content">
+ <br>
+<h5><b>Edit Blog</b></h5>
+<h1><center><b>{{superman.title}}</b></center></h1>
+<br>
+
+  <form id="ad" action="" method="POST" ><b><p>
+    {% csrf_token %}
+    {{form.as_p}}  
+    
+    </p>
+  </b>
+    <button type="submit" class="btn btn-primary" value="save" id=""><b>Save</b></button>
+   
+    <style type="text/css">
+      #ad { width: 100px; }
+    </style>
+
+  </form>
+ 
+  </div>
+{% endblock content %}

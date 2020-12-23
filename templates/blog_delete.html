@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+
+
+
+{% block content %}
+<br>
+<br>
+<br>
+<div class="content">
+ <br>
+<h5><b>Delete Blog</b></h5>
+<h1><center><b>{{batman.title}}</b></center></h1>
+<br>
+
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}  
+    <div class="alert alert-danger">
+        Are You Sure Want to Delete {{batman.title}}?
+
+    </div>
+    <button type="submit" class="btn btn-danger" value="Delete" id=""><b>Delete</b></button>
+
+  </form>
+
+  
+{% endblock content %}

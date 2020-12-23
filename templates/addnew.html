@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+
+
+
+{% block content %}
+<br>
+<br>
+<br>
+<div class="content">
+ <br>
+<h5><b>Create Blog</b></h5>
+<h1><center><b>Welcome</b></center></h1>
+<br>
+
+  <form id="ad" action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}  
+    <input type="submit" class="btn btn-primary" value="save" id="">
+  </form>
+  <style type="text/css">
+    #ad { width: 100px; }
+  </style>
+{% endblock content %}
